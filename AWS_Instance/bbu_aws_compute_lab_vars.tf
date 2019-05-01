@@ -29,14 +29,6 @@ variable "monitoring" {
   description = "If true, the launched EC2 instance will have detailed monitoring enabled"
   default     = false
 }
-variable "vpc_security_group_ids" {
-  description = "A list of security group IDs to associate with"
-  default        = "sg-06c4deb949a4ecf6b"
-}
-variable "subnet_id" {
-  description = "The VPC Subnet ID to launch in"
-  default     = "subnet-64e2220c"
-}
 variable "associate_public_ip_address" {
   description = "If true, the EC2 instance will have associated public IP address"
   default     = false
