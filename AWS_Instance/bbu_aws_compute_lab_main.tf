@@ -21,6 +21,6 @@ resource "aws_instance" "bbu_private_webserver" {
   tenancy                 = "${var.tenancy}"
   tags {
     Name  = "${element(var.instance_tags,count.index)}"
-    Batch = "Cluster"
+    Env = "Stage"
   }
 }
