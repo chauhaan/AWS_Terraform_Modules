@@ -1,6 +1,3 @@
-variable "region" {
-        default = "us-east-2"
-}
 variable "aws_key_pair" {}
 variable "ami" {
     default = "ami-0b500ef59d8335eee"
