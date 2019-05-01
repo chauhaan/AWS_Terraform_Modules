@@ -1,16 +1,9 @@
-variable "profile" {
-    description = "AWS credentials profile you want to use"
-}
 variable "region" {
         default = "us-east-2"
 }
 variable "aws_key_pair" {}
 variable "ami" {
-  type = "map"
-  description = "ID of AMI to use for the instance"
-  default = {
-    us-east-1 = "ami-0b500ef59d8335eee"
-  }
+    default = "ami-0b500ef59d8335eee"
 }
 variable "instance_type" {
   description = "The type of instance to start"

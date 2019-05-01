@@ -1,11 +1,11 @@
 resource "aws_instance" "bbu_private_webserver" {
-  ami                     = "${lookup(var.ami,var.aws_region)}"
+  ami                     = "${var.ami}"
   instance_type           = "${var.instance_type}"
   count                   = "${var.instance_count}"
   subnet_id               = "${var.subnet_id}"
   key_name                = "${var.aws_key_pair}"
   monitoring              = "${var.monitoring}"
-  vpc_security_group_ids  = "${var.vpc_security_group_ids}"
+  vpc_security_group_ids  = ["${var.vpc_security_group_ids}"]
   iam_instance_profile    = "${var.iam_instance_profile}"
   associate_public_ip_address = "${var.associate_public_ip_address}"
   private_ip              = "${var.private_ip}"
